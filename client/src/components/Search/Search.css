@@ -1,0 +1,30 @@
+.hsearch-container {
+    margin-left: 4vw;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.hinput-container {
+    margin-left: 70px;
+    width: 60vw;
+    padding: 2vh;
+    border-radius: 10px;
+    border: 1px solid black !important;
+    background-color: rgba(160, 160, 160,0.2);
+}
+
+.hinput-container:focus {
+    outline: none;
+    background-color: white;
+    color: black;   
+}
+
+.hsearch-container input{
+    border: 1px solid black !important;
+}
+
+::placeholder {
+    opacity: 1;
+    color:black;
+}

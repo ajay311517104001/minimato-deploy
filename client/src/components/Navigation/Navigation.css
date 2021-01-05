@@ -1,0 +1,51 @@
+
+.navigation-container {
+    /* margin-bottom: 20vh; */
+    margin: 3vh 7vw 6vh;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-toggler {
+    background-color: #0e0d0d7a;
+    border: 1px solid #7c333300;
+}
+
+.customModal {
+    width: 25vw;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+.customModalSignup {
+    width: 30vw;
+    height: 75vh;
+    border-radius: 5px;
+}
+
+.hover-link {
+  transition: 0.3s !important;
+}
+
+.hover-link:hover {
+  transform: scale(1.1, 1.1) !important;
+}
+
+@keyframes customEnterAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes customLeaveAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
