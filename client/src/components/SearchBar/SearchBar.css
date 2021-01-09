@@ -1,0 +1,62 @@
+.container-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4vh;   
+}
+
+.container .searchbar-container {
+    display: flex;
+    justify-content: center;
+    width: 50vw;   
+}
+
+.searchbar {
+    border-color: rgb(128, 110, 114);
+    border-radius: 7px;
+    background-color: white;
+    width: 40vw;
+    padding: 12px;
+    opacity: 0.5;    
+}
+
+::placeholder {
+    opacity: 1;
+    color:black;
+}
+
+.searchbar:focus {
+    outline: none;
+    border-color: black;
+    border-width: 2px;
+    background-color: white ;
+    color: black;   
+}
+
+.title{
+    font-family: 'Lemonada', cursive;
+    color: white;
+    margin-bottom: 0;
+    font-size: 60px;
+}
+
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 1.6vh 0px 2vh 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: small;
+    }
+
+    .slogan {
+        font-size: small;
+    }
+
+    .searchbar {
+        padding: 5px;
+        width: 70vw;
+    }
+}

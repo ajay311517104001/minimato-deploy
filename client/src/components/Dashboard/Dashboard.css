@@ -1,0 +1,21 @@
+
+
+.dashboard-container {
+    background-image: url("../Assets/homepage-min.jpg");
+    height:75%;
+    position:relative;
+    border: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;  
+    opacity:0.9;
+}
+
+.collectionPhrase {
+    font-family: 'Merriweather', serif;
+    color: rgba(0,0,0,0.5)
+}
+
+.collectionHeading {
+    font-family: 'Oswald', sans-serif;
+}
