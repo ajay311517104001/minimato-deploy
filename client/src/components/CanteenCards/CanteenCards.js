@@ -14,7 +14,7 @@ const CanteenCards = (props) => {
                         if(i < 6) {
                             return(
                                 <Card className = "hover canteen-cards" key= {i}>
-                                    <Link to = {`/api/canteenroute/${item.canteen_id}`}>
+                                    <Link to = {`canteenroute/${item.canteen_id}`}>
                                     <Card.Img variant="top" src = {`${item.imageurl}`} style = {{
                                             height:"280px",
                                             width: "100%"

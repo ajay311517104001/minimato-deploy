@@ -40,10 +40,10 @@ const Header = (props) => {
                                              alt = "profile"                                                   
                                         />}                                    
                               >
-                                   <NavDropdown.Item as = {Link} to='/api/protected/dashboard'>
+                                   <NavDropdown.Item as = {Link} to='/protected/dashboard'>
                                         Dashboard
                                    </NavDropdown.Item>
-                                   <NavDropdown.Item as = {Link} to='/api/protected/viewprofile'>
+                                   <NavDropdown.Item as = {Link} to='/protected/viewprofile'>
                                         View Profile
                                    </NavDropdown.Item>
                                    <NavDropdown.Item>
@@ -54,10 +54,10 @@ const Header = (props) => {
                                    </NavDropdown.Item>
                               </NavDropdown> :
                               <NavDropdown title = {`Hi ${name}`} id="basic-nav-dropdownn">
-                                   <NavDropdown.Item as = {Link} to='/api/protected/dashboard'>
+                                   <NavDropdown.Item as = {Link} to='/protected/dashboard'>
                                         Dashboard
                                    </NavDropdown.Item>
-                                   <NavDropdown.Item as = {Link} to='/api/protected/viewprofile'>
+                                   <NavDropdown.Item as = {Link} to='/protected/viewprofile'>
                                         View Profile
                                    </NavDropdown.Item>
                                    <NavDropdown.Item>

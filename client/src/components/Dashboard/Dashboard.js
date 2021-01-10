@@ -51,7 +51,7 @@ class Dashboard extends Component {
 
     render(){
         if(this.state.isAuthenticated) {
-            return <Redirect to = "/api/protected/dashboard" />
+            return <Redirect to = "/protected/dashboard" />
         }
         return (                            
             <div className = "dashboard-container-main">  

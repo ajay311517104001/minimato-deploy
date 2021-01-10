@@ -20,7 +20,7 @@ class Search extends React.Component {
         // console.log()
         const keyword = value
         if(keyword){
-          axios.get('/student/searchresults', {
+          axios.get('/api/student/searchresults', {
             headers:{
               keyword:keyword
             }, 

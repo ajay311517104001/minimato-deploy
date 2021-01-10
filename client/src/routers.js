@@ -18,10 +18,10 @@ const Rout = () => {
                     <Route exact path = "/">
                         <Dashboard />
                     </Route>
-                    <Route exact path = '/api/protected/dashboard' render={() => localStorage.getItem('Authorization')? <AuthenticatedDashboard /> : <Redirect to = '/'/>}/>
-                    <Route exact path = '/api/protected/viewprofile' render={() => localStorage.getItem('Authorization')? <Viewprofile />: <Redirect to = '/'/>}/>
-                    <Route path={`/api/canteenroute/:item`} render={(props)=> <CanteenMenu {...props}/>  }/>                              
-                    <Route path={`/api/protected/viewcart/:id`} render={(props)=> localStorage.getItem('Authorization')? <Viewcart {...props}/> : <Redirect to = '/'/>}/>        
+                    <Route exact path = '/protected/dashboard' render={() => localStorage.getItem('Authorization')? <AuthenticatedDashboard /> : <Redirect to = '/'/>}/>
+                    <Route exact path = '/protected/viewprofile' render={() => localStorage.getItem('Authorization')? <Viewprofile />: <Redirect to = '/'/>}/>
+                    <Route path={`/protected/canteenroute/:item`} render={(props)=> <CanteenMenu {...props}/>  }/>                              
+                    <Route path={`/protected/viewcart/:id`} render={(props)=> localStorage.getItem('Authorization')? <Viewcart {...props}/> : <Redirect to = '/'/>}/>        
                 </Switch>
             </div>
         </Router>

@@ -43,6 +43,7 @@ componentDidMount(){
   window.localStorage.setItem('drinks','[]')
   const { item } = this.props.match.params
   const id = (window.location.pathname).split("/")[3]
+  console.log(id);
   const token = JSON.parse(localStorage.getItem('Authorization'))
   axios.get('/api/student/menu',{headers: {id: id}})
   .then(res=>{            
@@ -310,7 +311,7 @@ componentDidMount(){
                                                                                                                   
                                     }
                                     <div style = {{display:"flex", justifyContent:"flex-end"}}>
-                                      <Link to = {{pathname:'/api/protected/viewcart'}}>
+                                      <Link to = {{pathname:'/protected/viewcart'}}>
                                         <button className = "btn btn-primary">View Cart</button>
                                       </Link>
                                     </div>  
@@ -454,7 +455,7 @@ componentDidMount(){
                                       })                                                                                                                                                        
                                     } 
                                     <div style = {{display:"flex", justifyContent:"flex-end"}}>
-                                      <Link to = {{pathname:`/api/protected/viewcart/${this.props.match.params.item}`}}>
+                                      <Link to = {{pathname:`/protected/viewcart/${this.props.match.params.item}`}}>
                                           <button className = "btn btn-primary">View Cart</button>
                                       </Link>
                                     </div>

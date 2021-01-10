@@ -26,7 +26,7 @@ class SearchBar  extends React.Component {
     const { loadSearchResuts } = this.props;
     const keyword = value
     if(keyword){
-      axios.get('/student/searchresults', {
+      axios.get('/api/student/searchresults', {
         headers:{
           keyword:keyword
         }, 

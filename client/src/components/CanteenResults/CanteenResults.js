@@ -14,7 +14,7 @@ const CanteenResults = (props) => {
             {
                 canteenDetails.map((item, i)=> {                     
                         return(
-                            <Link to = {{pathname:`/api/canteenroute/${item.canteen_id}`}} >
+                            <Link to = {{pathname:`/canteenroute/${item.canteen_id}`}} >
                                 <Card
                                     className = "hover"
                                     style = {{

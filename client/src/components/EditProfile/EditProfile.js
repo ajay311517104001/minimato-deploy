@@ -55,7 +55,7 @@ class EditProfile extends Component {
             if(name === '' || email === '' || phoneNumber === '' || gender === '' || address === '') {
                 alert("Please fill in all the fields.");
             } else {
-                Axios.put('/student/editprofile', {
+                Axios.put('/api/student/editprofile', {
                     id: id,
                     name: name,
                     email: email,
