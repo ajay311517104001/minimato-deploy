@@ -6,7 +6,7 @@ import axios from 'axios';
 import FooterPagePro from '../Footer/Footer';
 import CanteenCards from '../CanteenCards/CanteenCards'
 import CanteenResults from '../CanteenResults/CanteenResults'
-
+import domain from '../apis/domain'
 
 class AuthenticatedDashboard extends Component {
     constructor() {
@@ -25,8 +25,8 @@ class AuthenticatedDashboard extends Component {
 
     componentDidMount() {
         const token = JSON.parse(localStorage.getItem('Authorization'))
-        const reqOne = axios.get('/api/student/dashboard', {headers: {Authorization: token}})
-        const reqTwo = axios.get('/api/student/getCanteenDetails')
+        const reqOne = domain.get('/student/dashboard', {headers: {Authorization: token}})
+        const reqTwo = domain.get('/student/getCanteenDetails')
         axios.all([reqOne, reqTwo]).then(axios.spread((...responses) => {
             const responseOne = responses[0]
             const responseTwo = responses[1]

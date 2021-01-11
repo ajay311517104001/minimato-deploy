@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import domain from '../apis/domain'
 require('./ViewCart.css')
 
 
@@ -29,9 +29,9 @@ class Viewcart extends Component {
         event.preventDefault();
         const token = JSON.parse(localStorage.getItem('Authorization'))        
         try {            
-            axios({
+            domain({
                 method: 'post',
-                url: '/api/student/order', 
+                url: '/student/order', 
                 data: {
                     order:this.state.order,
                     canteenId: this.props.match.params.id

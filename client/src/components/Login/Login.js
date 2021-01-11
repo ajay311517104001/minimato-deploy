@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import domain from '../apis/domain'
 
 class Login extends Component {
     constructor(props) {
@@ -42,7 +43,8 @@ class Login extends Component {
             if (email === '' || password === ''){
                 alert("The input fields are empty")
             } else {
-                axios.post('/api/student/login',{email:email,password:password},{withCredentials:true})
+                console.log(process.env.NODE_ENV );
+                domain.post('/student/login',{email:email,password:password},{withCredentials:true})
                 .then(res => {
                     if(!res.data.success){
                         this.setState({errorMessage:"Incorrect Email ot Password"})

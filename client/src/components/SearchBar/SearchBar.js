@@ -1,9 +1,9 @@
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import Button from 'react-bootstrap/Button'
-import axios from 'axios';
-import "./SearchBar.css";
 
+import "./SearchBar.css";
+import domain from '../apis/domain'
    
   // Teach Autosuggest how to calculate suggestions for any given input value.
  
@@ -26,7 +26,7 @@ class SearchBar  extends React.Component {
     const { loadSearchResuts } = this.props;
     const keyword = value
     if(keyword){
-      axios.get('/api/student/searchresults', {
+      domain.get('/student/searchresults', {
         headers:{
           keyword:keyword
         }, 

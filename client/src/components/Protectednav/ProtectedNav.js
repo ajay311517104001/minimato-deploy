@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import axios from 'axios';
+import domain from '../apis/domain'
 import { Link } from 'react-router-dom';
 require('./ProtectedNav.css');
 
@@ -20,7 +20,7 @@ const ProtectedNav = (props) => {
         const token = JSON.parse(localStorage.getItem('Authorization'))
         const imageInfo = JSON.parse(localStorage.getItem('Image'));
         if(!imageInfo) {
-            axios.get('/api/student/getImage', {
+            domain.get('/student/getImage', {
                 headers : {
                     Authorization: token
                 },

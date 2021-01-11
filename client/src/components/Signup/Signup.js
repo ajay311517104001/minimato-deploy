@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import domain from '../apis/domain'
 import "./signup.css";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -79,7 +79,7 @@ class Signup extends Component {
                 alert("The input fields are empty");
             } else {
                 if(password === confirmPassword) {
-                    axios.post('/api/student/signup', {
+                    domain.post('/student/signup', {
                         clientName: fullName,
                         email:email,
                         gender:gender,

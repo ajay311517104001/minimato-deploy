@@ -8,7 +8,7 @@ import CanteenCards from '../CanteenCards/CanteenCards'
 import FooterPagePro from '../Footer/Footer';
 import axios from 'axios';
 import CanteenResults from '../CanteenResults/CanteenResults';
-
+import domain from '../apis/domain'
 
 
 class Dashboard extends Component {
@@ -22,7 +22,7 @@ class Dashboard extends Component {
     }
     
     componentDidMount(){
-        axios.get('/api/student/getCanteenDetails')
+        domain.get('/student/getCanteenDetails')
         .then(res=>{            
             this.setState({ 
                 canteenDetails:res.data.payload.canteenDetails

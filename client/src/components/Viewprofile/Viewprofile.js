@@ -6,10 +6,11 @@ import Header from '../Header/Header';
 import FooterPagePro from '../Footer/Footer';
 import CanteenResults from '../CanteenResults/CanteenResults'
 import './ViewProfile.css';
-import axios from 'axios';
+import domain from '../apis/domain'
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
+import Axios from 'axios';
 
 
 const profilePicHandler = () => {
@@ -30,8 +31,8 @@ const Viewprofile = () => {
     const imageInfo = JSON.parse(localStorage.getItem('Image'));
     useEffect(() => {
         const token = JSON.parse(localStorage.getItem('Authorization'))
-        const reqOne = axios.get('/api/student/getImage', {headers: {Authorization: token}});
-        axios.all([reqOne]).then(axios.spread((...responses) => {
+        const reqOne = domain.get('/student/getImage', {headers: {Authorization: token}});
+        Axios.all([reqOne]).then(Axios.spread((...responses) => {
             const responseOne = responses[0]                    
             localStorage.setItem("Image", JSON.stringify({
                 imageUrl: responseOne.data.payload.url               
@@ -55,9 +56,9 @@ const Viewprofile = () => {
         event.preventDefault();
         fd.append('picture', selectedFile, selectedFile.name);
         fd.append('id',id)                
-        axios({
+        domain({
             method: 'post',
-            url: '/api/student/uploadImage', 
+            url: '/student/uploadImage', 
             data: fd,
             headers: { 
                 'Authorization': token,

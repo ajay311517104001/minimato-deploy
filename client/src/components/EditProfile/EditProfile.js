@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Axios from 'axios';
-
+import domain from '../apis/domain'
 class EditProfile extends Component {
     constructor() {
         super();
@@ -55,7 +55,7 @@ class EditProfile extends Component {
             if(name === '' || email === '' || phoneNumber === '' || gender === '' || address === '') {
                 alert("Please fill in all the fields.");
             } else {
-                Axios.put('/api/student/editprofile', {
+                domain.put('/api/student/editprofile', {
                     id: id,
                     name: name,
                     email: email,

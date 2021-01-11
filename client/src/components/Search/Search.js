@@ -1,9 +1,9 @@
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import Button from 'react-bootstrap/Button'
-import axios from 'axios';
-import './Search.css';
 
+import './Search.css';
+import domain from '../apis/domain'
 class Search extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +20,7 @@ class Search extends React.Component {
         // console.log()
         const keyword = value
         if(keyword){
-          axios.get('/api/student/searchresults', {
+          domain.get('/student/searchresults', {
             headers:{
               keyword:keyword
             }, 

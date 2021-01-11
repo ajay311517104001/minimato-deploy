@@ -13,7 +13,7 @@ import {
 } from "@ant-design/icons";
 import "./canteenMenu.css"
 import UnAuthenticatedHeader from '../UnAuthenticatedHeader/UnAuthenticatedHeader';
-
+import domain from '../apis/domain'
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -45,7 +45,7 @@ componentDidMount(){
   const id = (window.location.pathname).split("/")[3]
   console.log(id);
   const token = JSON.parse(localStorage.getItem('Authorization'))
-  axios.get('/api/student/menu',{headers: {id: id}})
+  domain.get('/student/menu',{headers: {id: id}})
   .then(res=>{            
     this.setState({
       starters: res.data.payload.starters,
