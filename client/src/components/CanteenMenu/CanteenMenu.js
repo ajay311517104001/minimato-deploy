@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HeaderSearch from '../Header/Header';
 import "antd/dist/antd.css";
 import FooterPagePro from '../Footer/Footer';
-import axios from 'axios';
+
 import { Layout, Menu, Breadcrumb } from "antd";
 import CanteenResults from '../CanteenResults/CanteenResults'
 import {Link} from 'react-router-dom'

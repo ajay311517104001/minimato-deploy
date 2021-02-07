@@ -1,0 +1,16 @@
+.profile-container {
+    margin-top: 5vh;
+}
+
+#antimage:hover {
+    cursor: pointer;
+}
+
+.profileImagePosition {
+    position: fixed !important;
+    padding: 10px;
+}
+
+.profileImagePic:hover {
+    cursor: pointer;
+}
